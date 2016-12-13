@@ -1,9 +1,8 @@
 var express = require('express');
 var app = express();
+var router = express.Router();
 
-app.get('/',function(req, res){
-  res.send('hello world');
-})
+router.use('/home', express.static('client'));
 
 var port = (process.env.PORT || 1336);
 
